@@ -22,21 +22,8 @@
     });
   }
 
-  var nav = document.getElementById("site-nav");
-  if (!nav) return;
-  var threshold = 200;
-  var onScroll = function () {
-    if (window.scrollY > threshold) {
-      nav.classList.add("is-visible");
-    } else {
-      nav.classList.remove("is-visible");
-    }
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
   var revealTargets = document.querySelectorAll(
-    ".policy-card, .video-card, .timeline-item, .news-item, .faq-item"
+    ".policy-row, .video-card, .timeline-item, .news-item, .faq-item"
   );
   if ("IntersectionObserver" in window && revealTargets.length) {
     revealTargets.forEach(function (el) {
