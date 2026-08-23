@@ -280,10 +280,18 @@ h2::after {
 .hero .btn-secondary { border-color: rgba(250,246,241,0.6); color: var(--color-cream); }
 
 @media (max-width: 900px) {
-  .hero-viewport { height: auto; min-height: 620px; }
-  .hero-overlay { flex-direction: column; align-items: flex-start; padding: 1.5rem 1.5rem 2.2rem; }
-  .hero-wordmark { font-size: clamp(3.5rem, 16vw, 6rem); }
+  .hero-viewport { height: auto; min-height: 480px; }
+  .hero-bg img { object-position: 75% 12%; }
+  .hero-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 2.2rem;
+  }
+  .hero-wordmark { font-size: clamp(1.8rem, 7.5vw, 2.6rem); text-shadow: 0 4px 24px rgba(38,35,34,0.5); }
   .hero-text { max-width: none; padding-bottom: 0; }
+  .hero-sub { display: none; }
 }
 
 /* badge strip */
